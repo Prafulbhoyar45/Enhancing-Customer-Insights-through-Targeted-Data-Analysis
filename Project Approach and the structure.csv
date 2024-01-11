@@ -1,0 +1,40 @@
+Task,Fetchout the Information from the SQL Server,,,,,,,,,,,,,,,,,
+need to find,Account Number,,,Given ,table 1,[CUSTFORM].[CustomerForm],,,,,,,,,,,,
+,Customer Name,,,,table 2,[CUSTREQUESTFLOW].[ApprovedCustomer_SystemID],,,,,,,,,,,,
+,Customer Type,,,,table 3,[ADM].[Employee],,,,,,,,,,,,
+,Who initiated the request,,,,table 4,[CUSTFORM].[CustomerType],,,,,,,,,,,,
+,Request date,,,,,,,,,,,,,,,,,
+,Request Type,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,
+,,,,,Approach,,Start,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,
+,,,,,,,Define what is the information needs to fetch,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,
+,,,,,,,Collect the tables who are associated with the task,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,
+,,,,,,,Find the relative columns and map it with the columns,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,
+,,,,,,,find the connection between the table to perform the Joining Operations,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,Required Information,Columns names representing the same information
+,,,,,,,Consider the conditions give in the task ,,,,,,,,,,Account #,Oracle ID
+,,,,,,,,,,,,,,,,,Customer Name,CustomerName
+,,,,,,,Formulate the SQL query that you gone run on the Server,,,,,,,,,,Customer Type,CustomerType_Name
+,,,,,,,,,,,,,,,,,LAST_UPDATED_BY / Who initiated the request,Employee_FullName
+,,,,,,,Test the resulting table,,,,,,,,,,LAST_UPDATE_DATE / Request date,CustomerForm_Updated
+,,,,,,,,,,,,,,,,,Request Type,ChangeType
+,,,,,,,End,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,
+References,https://dev.mysql.com/doc/refman/8.0/en/join.html,,,,,,,Joining approach,,,,,,,,,,
+,https://dev.mysql.com/doc/refman/8.0/en/call.html,,,,,,,Inner Join,,,,,,,,Condition: ,"Where CSI_System_Name = ORCL, Show CSI_System_ID",
+,https://dev.mysql.com/doc/refman/8.0/en/charset.html,,,,,,,,,,,,,,,,,
+,,,,,,,,table 1,,,,table 2,,,,,,
+,,,,,,,,CDM_ID,,,,CDM_ID,,,,,,
+,,,,,,,,,,,,,,,,,,
+,,,,,,,,table 1,,,,table 3,,,,,,
+,,,,,,,,CustomerSubmittedEmail_ByEmployeeID,,,,Employee_ID,,,,,,
+,,,,,,,,,,,,,,,,,,
+,,,,,,,,table 1 ,,,,table 4,,,,,,
+,,,,,,,,CustomerType_ID,,,,CustomerType_ID,,,,,,
